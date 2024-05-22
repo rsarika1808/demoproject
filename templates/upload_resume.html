@@ -1,0 +1,78 @@
+{% extends 'layout/base.html' %}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-2">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>File Upload Form</title>#}
+{#    <link rel="stylesheet" href="styles.css">#}
+{#    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">#}
+{#</head>#}
+{#<body >#}
+{% block content %}
+<div style="background: #96EDF1; height: 100vh; padding: 40px">
+    <div style="border: 1px solid #DFDDDC;background: white; box-shadow: 2px 0px 6px 1px #DFDDDC; padding: 20px;border-radius: 15px;">
+        <h1>Upload File</h1>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+        <form method="post" enctype="multipart/form-data" class="center">
+            <div class="form-group">
+                <label for="file" class="form-label">Choose File</label>
+                <input type="file" class="form-control w-100" name="file" id="file" placeholder="Choose File"
+                       aria-describedby="fileHelpId">
+                <div id="fileHelpId" class="form-text">Select a file to upload</div>
+            </div>
+            <button class="btn w-50 btn-success">Upload</button>
+        </form>
+            </div></div></div>
+</div>
+{% endblock %}
+{#</body>#}
+{#</html>#}
+{% block css %}
+<style>
+    /* Style the container */
+.container {
+    padding-top: 2px; /* Add some space at the top */
+}
+
+/* Style the card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 2px;
+}
+
+/* Style the heading */
+h1 {
+    text-align: center;
+    margin-bottom: 2px
+}
+
+/* Style the form */
+.form-label {
+    font-weight: bold;
+}
+
+.form-text {
+    color: #6c757d; /* Help text color */
+}
+
+/* Style the file input */
+.form-control {
+    margin-bottom: 2px;
+}
+
+/* Style the submit button */
+.btn-success {
+    width: 10%;
+}
+
+/* Optional: Add hover effect to the submit button */
+.btn-success:hover {
+    background-color: #28a745; /* Darker shade of green */
+}
+</style>
+{% endblock %}

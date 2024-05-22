@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>All Jobs</h1>
+        </header>
+        <main>
+            <section class="widget">
+                <h2>Software Developer</h2><button class="btn btn-warning">View More</button>
+            </section>
+             <section class="widget">
+                <h2>Frontend Developer</h2><button class="btn btn-warning">View More</button>
+            </section> <section class="widget">
+                <h2>Bsckend Developer</h2><button class="btn btn-warning">View More</button>
+            </section> <section class="widget">
+                <h2>java</h2><button class="btn btn-warning">View More</button>
+            </section> <section class="widget">
+                <h2>Analytics job</h2><button class="btn btn-warning">View More</button>
+            </section> <section class="widget">
+                <h2>Full Stack Developer</h2><button class="btn btn-warning">View More</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.widget {
+    flex-basis: calc(33.33% - 20px);
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 10px;
+}
+</style>

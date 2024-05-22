@@ -1,0 +1,138 @@
+{% extends 'layout/base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<style>
+body {
+	margin: 0;
+	border: 0;
+	background-color: #000;
+}
+
+#content-block {
+	position: relative;
+	overflow: hidden;
+}
+
+.parallax-slide {
+	position: relative;
+	height: 100vh;
+}
+
+.parallax-clip {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	/*clip: rect(auto, auto, auto, auto);*/
+}
+
+.fixed-parallax {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
+	/* -webkit-transform: translateZ(0); /* necessary for iOS! */
+}
+
+
+/* used only as overlay for the images,
+   darkens it a little in this case */
+.fixed-parallax:before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.2);
+	content: "";
+}
+
+
+/* CSS specific to iOS devices */
+@supports (-webkit-overflow-scrolling: touch) {
+	.parallax-clip {
+		clip: rect(auto, auto, auto, auto);
+	}
+	.fixed-parallax {
+		position: fixed;
+		background-attachment: unset;
+		-webkit-transform: translateZ(0); /* necessary for iOS! */
+	}
+}
+
+</style>
+{% endblock %}
+{% block content %}
+    <!-- Your index page content goes here -->
+    <div id="content-block">
+
+			<div class="content-push">
+
+				<div class="parallax-slide">
+					<div class="parallax-clip">
+						<div class="fixed-parallax" style="background-image: url(https://picsum.photos/1920/1080/?image=967);">
+						 <h1 style="color: #eaf0fb ">Welcome to the Project!</h1>
+        <h1 style="color: #eaf0fb;">Find Your Dream Job Now</h1>
+        <h1 style="color: #eaf0fb;">Build your profile and let recruiters find you</h1>
+
+                        </div>
+				</div>
+				</div>
+				<div class="parallax-slide">
+					<div class="parallax-clip">
+						<div class="fixed-parallax" style="background-image: url(https://picsum.photos/1920/1080/?image=569);">
+
+                         <h1 style="color: #eaf0fb ">Welcome to the Project!</h1>
+        <h1 style="color: #eaf0fb;">Find Your Dream Job Now</h1>
+        <h1 style="color: #eaf0fb;">Build your profile and let recruiters find you</h1>
+</div>
+				</div>
+				</div>
+
+				<div class="parallax-slide">
+					<div class="parallax-clip">
+						<div class="fixed-parallax" style="background-image: url(https://picsum.photos/1920/1080/?image=119);">
+						 <h1 style="color: #eaf0fb ">Welcome to the Project!</h1>
+        <h1 style="color: #eaf0fb;">Find Your Dream Job Now</h1>
+        <h1 style="color: #eaf0fb;">Build your profile and let recruiters find you</h1>
+
+                        </div>
+				</div>
+				</div>
+
+				<div class="parallax-slide">
+					<div class="parallax-clip">
+						<div class="fixed-parallax" style="background-image: url(https://picsum.photos/1920/1080/?image=507);">
+						 <h1 style="color: #eaf0fb ">Welcome to the Project!</h1>
+        <h1 style="color: #eaf0fb;">Find Your Dream Job Now</h1>
+        <h1 style="color: #eaf0fb;">Build your profile and let recruiters find you</h1>
+
+                        </div>
+				</div>
+				</div>
+
+
+
+    <div class="container"  style="background-image: url('../static/data/we-are-hiring-concept.jpg'); width: 100%; height: 100vh; background-size: cover;background-repeat: no-repeat">
+        <h1 style="color: #eaf0fb ">Welcome to the Project!</h1>
+        <h1 style="color: #eaf0fb;">Find Your Dream Job Now</h1>
+        <h1 style="color: #eaf0fb;">Build your profile and let recruiters find you</h1>
+
+    </div>
+    			</div>
+</div>
+{% endblock %}
+{% block js %}
+    <script>
+        // Add your scripts here
+    </script>
+{% endblock %}
+<!-- Link to your custom styles.css file -->
+
+<!-- Your additional JavaScript for the index page goes here -->
